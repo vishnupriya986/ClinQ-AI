@@ -1,0 +1,4 @@
+Source: UCI Machine Learning Repository, Early Stage Diabetes Risk Prediction Dataset.
+https://archive.ics.uci.edu/dataset/529/early+stage+diabetes+risk+prediction+dataset
+Archive: https://archive.ics.uci.edu/static/public/529/early+stage+diabetes+risk+prediction+dataset
+Inputs: age, gender, and 14 self-reported symptoms. This is a small survey dataset, not a prospective clinical cohort. Outputs are research model estimates, not medical risk probabilities or diagnoses.

@@ -1,0 +1,4 @@
+Source: UCI Machine Learning Repository, Heart Disease (Cleveland subset).
+https://archive.ics.uci.edu/dataset/45/heart+disease
+Archive: https://archive.ics.uci.edu/static/public/45/heart+disease.zip
+The processed Cleveland file has 13 model inputs and a target where 0 is absence and 1–4 are disease presence. Rows with missing values are excluded. The dataset is historical and is not a representative clinical cohort.

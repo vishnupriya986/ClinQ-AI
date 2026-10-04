@@ -1,0 +1,66 @@
+{
+  "disease": "heart",
+  "target": "HeartDisease",
+  "source": "heart_disease_synthetic.csv",
+  "source_is_synthetic": true,
+  "model_version": "heart_synthetic_logistic_platt_v1",
+  "feature_order": [
+    "age",
+    "gender",
+    "heightCm",
+    "weightKg",
+    "systolicBloodPressure",
+    "diastolicBloodPressure",
+    "totalCholesterol",
+    "ldlCholesterol",
+    "hdlCholesterol",
+    "triglycerides",
+    "bloodGlucose",
+    "diabetes",
+    "smokingHabit",
+    "alcoholHabit",
+    "weeklyExerciseMinutes",
+    "familyHistoryOfHeartDisease",
+    "previousHeartDisease",
+    "bmi"
+  ],
+  "categorical_features": [
+    "gender",
+    "diabetes",
+    "smokingHabit",
+    "alcoholHabit",
+    "familyHistoryOfHeartDisease",
+    "previousHeartDisease"
+  ],
+  "data": {
+    "rows": 2000,
+    "positive_rows": 387,
+    "rows_with_any_missing_input": 0,
+    "missing_by_feature": {}
+  },
+  "development_rows": 1600,
+  "held_out_rows": 400,
+  "held_out_positive_rate": 0.19,
+  "held_out_metrics": {
+    "roc_auc": 0.8228963612735543,
+    "brier_score": 0.11614134164157738,
+    "accuracy_at_50_percent": 0.84,
+    "precision_at_50_percent": 0.6304347826086957,
+    "sensitivity_at_50_percent": 0.3815789473684211,
+    "specificity_at_50_percent": 0.9475308641975309,
+    "confusion_matrix_tn_fp_fn_tp": [
+      307,
+      17,
+      47,
+      29
+    ]
+  },
+  "synthetic_score_band_thresholds_percent": {
+    "low_below_percent": 30,
+    "medium_below_percent": 60,
+    "high_from_percent": 60
+  },
+  "warning": "Held-out metrics and probabilities describe only this synthetic dataset, not real-world disease risk.",
+  "sklearn_version": "1.7.1",
+  "calibration": "Grouped out-of-fold Platt scaling on development data; grouped held-out test evaluation."
+}

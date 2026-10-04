@@ -1,0 +1,72 @@
+{
+  "disease": "diabetes",
+  "target": "Diabetes",
+  "source": "diabetes_synthetic.csv",
+  "source_is_synthetic": true,
+  "model_version": "diabetes_synthetic_logistic_platt_v1",
+  "feature_order": [
+    "age",
+    "gender",
+    "heightCm",
+    "weightKg",
+    "fastingBloodGlucose",
+    "hba1c",
+    "systolicBloodPressure",
+    "diastolicBloodPressure",
+    "familyHistoryOfDiabetes",
+    "previousPrediabetes",
+    "weeklyExerciseMinutes",
+    "smokingHabit",
+    "alcoholHabit",
+    "dietQuality",
+    "sugaryDrinksConsumption",
+    "gestationalDiabetesHistory",
+    "pcos",
+    "bmi"
+  ],
+  "categorical_features": [
+    "gender",
+    "familyHistoryOfDiabetes",
+    "previousPrediabetes",
+    "smokingHabit",
+    "alcoholHabit",
+    "dietQuality",
+    "sugaryDrinksConsumption",
+    "gestationalDiabetesHistory",
+    "pcos"
+  ],
+  "data": {
+    "rows": 2000,
+    "positive_rows": 234,
+    "rows_with_any_missing_input": 1160,
+    "missing_by_feature": {
+      "gestationalDiabetesHistory": 1065,
+      "pcos": 1056
+    }
+  },
+  "development_rows": 1600,
+  "held_out_rows": 400,
+  "held_out_positive_rate": 0.115,
+  "held_out_metrics": {
+    "roc_auc": 0.8892778187177598,
+    "brier_score": 0.07393184908156898,
+    "accuracy_at_50_percent": 0.89,
+    "precision_at_50_percent": 0.6666666666666666,
+    "sensitivity_at_50_percent": 0.08695652173913043,
+    "specificity_at_50_percent": 0.9943502824858758,
+    "confusion_matrix_tn_fp_fn_tp": [
+      352,
+      2,
+      42,
+      4
+    ]
+  },
+  "synthetic_score_band_thresholds_percent": {
+    "low_below_percent": 30,
+    "medium_below_percent": 60,
+    "high_from_percent": 60
+  },
+  "warning": "Held-out metrics and probabilities describe only this synthetic dataset, not real-world disease risk.",
+  "sklearn_version": "1.7.1",
+  "calibration": "Grouped out-of-fold Platt scaling on development data; grouped held-out test evaluation."
+}

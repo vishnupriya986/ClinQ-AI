@@ -1,0 +1,40 @@
+{
+  "disease": "diabetes",
+  "dataset_rows_after_cleaning": 520,
+  "model_fit_rows": 292,
+  "calibration_rows": 107,
+  "test_rows": 121,
+  "grouped_split": "Repeated identical feature profiles were kept within one outer-fold group.",
+  "algorithm": "RandomForestClassifier",
+  "best_parameters": {
+    "classifier": "RandomForestClassifier",
+    "classifier__max_depth": null,
+    "classifier__min_samples_leaf": 2,
+    "classifier__n_estimators": 200
+  },
+  "cross_validation_roc_auc": 0.9514252628938438,
+  "cross_validation_recall_sensitivity": 0.9365377730039384,
+  "cross_validation_specificity": 0.8469959677419354,
+  "selection_method": "Choose highest cross-validated recall among models within 0.02 ROC-AUC of best and at least 0.50 specificity; otherwise choose among the ROC-AUC near-best models.",
+  "threshold_for_reported_sensitivity_specificity_only": 0.5,
+  "test_metrics": {
+    "accuracy": 0.8925619834710744,
+    "precision": 0.8452380952380952,
+    "recall_sensitivity": 1.0,
+    "specificity": 0.74,
+    "f1": 0.9161290322580645,
+    "roc_auc": 0.9476056338028168,
+    "confusion_matrix_tn_fp_fn_tp": [
+      [
+        37,
+        13
+      ],
+      [
+        0,
+        71
+      ]
+    ],
+    "brier_score": 0.1055511774494924
+  },
+  "validation_notice": "Grouped stratified holdout, grouped cross-validation, separate grouped sigmoid calibration split; not externally or clinically validated."
+}

@@ -1,0 +1,76 @@
+{
+  "disease": "lung",
+  "target": "LungCancer",
+  "source": "lung_cancer_synthetic.csv",
+  "source_is_synthetic": true,
+  "model_version": "lung_synthetic_logistic_platt_v1",
+  "feature_order": [
+    "age",
+    "gender",
+    "smokingStatus",
+    "cigarettesPerDay",
+    "yearsOfSmoking",
+    "secondhandSmokeExposure",
+    "workplaceExposure",
+    "asbestosExposure",
+    "radonExposure",
+    "airPollutionExposure",
+    "chronicLungDisease",
+    "familyHistoryOfLungCancer",
+    "previousCancerHistory",
+    "previousChestRadiation",
+    "persistentCough",
+    "shortnessOfBreath",
+    "chestPain",
+    "packYears"
+  ],
+  "categorical_features": [
+    "gender",
+    "smokingStatus",
+    "secondhandSmokeExposure",
+    "workplaceExposure",
+    "asbestosExposure",
+    "radonExposure",
+    "airPollutionExposure",
+    "chronicLungDisease",
+    "familyHistoryOfLungCancer",
+    "previousCancerHistory",
+    "previousChestRadiation",
+    "persistentCough",
+    "shortnessOfBreath",
+    "chestPain"
+  ],
+  "data": {
+    "rows": 2000,
+    "positive_rows": 222,
+    "rows_with_any_missing_input": 1331,
+    "missing_by_feature": {
+      "workplaceExposure": 1331
+    }
+  },
+  "development_rows": 1601,
+  "held_out_rows": 399,
+  "held_out_positive_rate": 0.13032581453634084,
+  "held_out_metrics": {
+    "roc_auc": 0.8173354023498115,
+    "brier_score": 0.08821035719537677,
+    "accuracy_at_50_percent": 0.8897243107769424,
+    "precision_at_50_percent": 0.8333333333333334,
+    "sensitivity_at_50_percent": 0.19230769230769232,
+    "specificity_at_50_percent": 0.9942363112391931,
+    "confusion_matrix_tn_fp_fn_tp": [
+      345,
+      2,
+      42,
+      10
+    ]
+  },
+  "synthetic_score_band_thresholds_percent": {
+    "low_below_percent": 30,
+    "medium_below_percent": 60,
+    "high_from_percent": 60
+  },
+  "warning": "Held-out metrics and probabilities describe only this synthetic dataset, not real-world disease risk.",
+  "sklearn_version": "1.7.1",
+  "calibration": "Grouped out-of-fold Platt scaling on development data; grouped held-out test evaluation."
+}

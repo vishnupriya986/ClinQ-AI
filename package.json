@@ -1,0 +1,24 @@
+{
+  "name": "clinq-ai",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n server,client -c blue,green \"npm run dev --workspace server\" \"npm run dev --workspace client\"",
+    "build": "npm run build --workspace client",
+    "start": "npm run start --workspace server",
+    "db:setup": "npm run db:setup --workspace server",
+    "ml:train": "python ml/train.py all",
+    "ml:train-synthetic": "python ml/train_synthetic.py all",
+    "ml:serve": "python -m uvicorn ml.service:app --host 127.0.0.1 --port 8000"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "allowScripts": {
+    "esbuild@0.25.12": true
+  }
+}

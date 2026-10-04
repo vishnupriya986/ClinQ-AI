@@ -1,0 +1,38 @@
+{
+  "disease": "heart",
+  "dataset_rows_after_cleaning": 297,
+  "model_fit_rows": 166,
+  "calibration_rows": 56,
+  "test_rows": 75,
+  "grouped_split": "Repeated identical feature profiles were kept within one outer-fold group.",
+  "algorithm": "LogisticRegression",
+  "best_parameters": {
+    "classifier": "LogisticRegression",
+    "classifier__C": 0.1
+  },
+  "cross_validation_roc_auc": 0.9043056009589191,
+  "cross_validation_recall_sensitivity": 0.817832625040863,
+  "cross_validation_specificity": 0.8150174101261058,
+  "selection_method": "Choose highest cross-validated recall among models within 0.02 ROC-AUC of best and at least 0.50 specificity; otherwise choose among the ROC-AUC near-best models.",
+  "threshold_for_reported_sensitivity_specificity_only": 0.5,
+  "test_metrics": {
+    "accuracy": 0.8266666666666667,
+    "precision": 0.84375,
+    "recall_sensitivity": 0.7714285714285715,
+    "specificity": 0.875,
+    "f1": 0.8059701492537313,
+    "roc_auc": 0.9007142857142857,
+    "confusion_matrix_tn_fp_fn_tp": [
+      [
+        35,
+        5
+      ],
+      [
+        8,
+        27
+      ]
+    ],
+    "brier_score": 0.1237131703700653
+  },
+  "validation_notice": "Grouped stratified holdout, grouped cross-validation, separate grouped sigmoid calibration split; not externally or clinically validated."
+}
